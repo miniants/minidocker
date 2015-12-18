@@ -1,0 +1,58 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<!-- 配置本地库 -->
+	<localRepository>${user.home}/.m2/repository</localRepository>
+	<!-- 配置镜像 -->
+	<mirrors></mirrors>
+	<!-- 配置账户 -->
+	<profiles>
+		<profile>
+			<id>nexus</id>
+			<repositories>
+				<snapshotRepository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</snapshotRepository>
+				<repository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+				<repository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/groups/public</url>
+				</repository>
+				<repository>
+					<id>ossrh</id>
+					<url>https://oss.sonatype.org/content/groups/staging</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>nexus</activeProfile>
+	</activeProfiles>
+	<servers>
+		<!-- 配置nexus账户密码 -->
+		<server>
+			<id>releases</id>
+			<username>deployment</username>
+			<password>zhlh_1234</password>
+		</server>
+		<server>
+			<id>snapshots</id>
+			<username>deployment</username>
+			<password>zhlh_1234</password>
+		</server>
+	</servers>
+</settings>
