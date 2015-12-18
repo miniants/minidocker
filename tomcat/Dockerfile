@@ -25,4 +25,4 @@ EXPOSE 8080 8443
 
 ENTRYPOINT ["/scripts/run"]
 
-ONBUILD ADD . ${APP_DIR}
+ONBUILD ADD *.war ${APP_DIR}

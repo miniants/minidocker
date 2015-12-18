@@ -4,7 +4,7 @@ set -e
 
 # Generate tomcat user password
 TOMCAT_USER=${TOMCAT_USER:-admin}
-TOMCAT_PASS=${TOMCAT_PASS:-csphere2015}
+TOMCAT_PASS=${TOMCAT_PASS:-miniantsPW}
 
 echo "=> Creating and admin user with a ${_word} password in Tomcat"
 sed -i -r 's/<\/tomcat-users>//' ${CATALINA_HOME}/conf/tomcat-users.xml
