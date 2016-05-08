@@ -3,7 +3,7 @@
 #
 # Dockerizing jdk: Dockerfile for building jdk images
 #
-FROM       miniants/centos:7.1
+FROM       miniants/centos:7.2
 MAINTAINER henry <henry@miniants.cn>
 
 ENV JAVA_VERSION 1.8.0
