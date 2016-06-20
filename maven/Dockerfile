@@ -4,7 +4,7 @@
 #
 # Dockerizing maven: Dockerfile for building maven images
 #
-FROM       miniants/jdk:1.8.0
+FROM       registry.aliyuncs.com/miniants/jdk:1.8
 MAINTAINER henry <henry@miniants.cn>
 
 ENV MAVEN_VERSION 3.3.9

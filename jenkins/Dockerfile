@@ -1,4 +1,4 @@
-FROM miniants/maven:3.3.9
+FROM registry.aliyuncs.com/miniants/maven:3.3.9
 
 
 ENV JENKINS_HOME /var/jenkins_home

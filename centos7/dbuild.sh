@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t miniants/centos:7.2 .
+docker build -t registry.aliyuncs.com/miniants/centos:7.2 .

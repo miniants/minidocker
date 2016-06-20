@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t miniants/jenkins:1.625.3 .
+docker build -t registry.aliyuncs.com/miniants/jenkins:1.625.3 .

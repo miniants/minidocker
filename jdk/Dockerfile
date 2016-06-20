@@ -3,12 +3,18 @@
 #
 # Dockerizing jdk: Dockerfile for building jdk images
 #
-FROM       miniants/centos:7.2
+FROM       registry.aliyuncs.com/miniants/centos:7.2
 MAINTAINER henry <henry@miniants.cn>
 
-ENV JAVA_VERSION 1.8.0
-ENV JDK_HOME /usr/lib/jvm/java-1.8.0-openjdk
+ENV JAVA_VERSION 1.8
+ENV JDK_HOME /usr/java/jdk1.8.0_92/bin/java
+
+#下载sum jdk http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-x64.rpm
+RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-x64.rpm && \
+	yum install -y jdk-8u92-linux-x64.rpm && \
+	rm -f jdk-8u92-linux-x64.rpm
+
 
 # Install jdk
-RUN yum -y install java-${JAVA_VERSION}-openjdk java-${JAVA_VERSION}-openjdk-devel && \
-    yum clean all
+#RUN yum -y install java-${JAVA_VERSION}-openjdk java-${JAVA_VERSION}-openjdk-devel && \
+#    yum clean all
