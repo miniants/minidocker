@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t miniants/tomcat:6.0.45 .
+docker build -t registry.aliyuncs.com/miniants/tomcat:6.0.45 .

@@ -14,6 +14,8 @@ RUN wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acc
 	yum install -y jdk-8u92-linux-x64.rpm && \
 	rm -f jdk-8u92-linux-x64.rpm
 
+COPY US_export_policy.jar /usr/java/jdk1.8.0_92/jre/lib/security/US_export_policy.jar
+COPY local_policy.jar /usr/java/jdk1.8.0_92/jre/lib/security/local_policy.jar
 
 # Install jdk
 #RUN yum -y install java-${JAVA_VERSION}-openjdk java-${JAVA_VERSION}-openjdk-devel && \

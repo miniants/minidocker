@@ -14,7 +14,8 @@ ENV APP_DIR ${CATALINA_HOME}/webapps/
 
 # Install tomcat
 #RUN wget http://apache.opencas.org/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.tar.gz
-RUN wget http://mirrors.noc.im/apache/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.tar.gz
+#RUN wget http://mirrors.noc.im/apache/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.tar.gz
+COPY apache-tomcat-8.0.36.tar.gz apache-tomcat-8.0.36.tar.gz
 
 RUN tar zxf apache-tomcat-*.tar.gz && \
     rm apache-tomcat-*.tar.gz && \

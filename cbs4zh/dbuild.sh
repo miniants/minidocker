@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t miniants/cbs4zh:temp .
+docker build -t registry.aliyuncs.com/miniants/cbs4zh:temp .

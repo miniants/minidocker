@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t registry.aliyuncs.com/miniants/maven:3.3.9 .
+docker build -t registry.aliyuncs.com/miniants/buildcontainer:1.0 .

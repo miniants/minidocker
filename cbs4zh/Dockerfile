@@ -5,5 +5,5 @@
 # Dockerizing TOMCAT: Dockerfile for building TOMCAT images
 #
 
-FROM       miniants/tomcat:6.0.45
+FROM       registry.aliyuncs.com/miniants/tomcat:6.0.45
 MAINTAINER henry <henry@miniants@cn>
